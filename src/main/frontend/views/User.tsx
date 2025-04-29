@@ -1,8 +1,8 @@
 import { ViewConfig } from '@vaadin/hilla-file-router/types.js';
 
-export const config: ViewConfig = { menu: { order: 0, icon: 'line-awesome/svg/home-solid.svg' }, title: 'Home' };
+export const config: ViewConfig = { menu: { order: 1, icon: 'line-awesome/svg/user.svg' }, title: 'User' };
 
-export default function HomeView() {
+export default function UserView() {
   return (
     <div className="flex flex-col h-full items-center justify-center p-l text-center box-border">
       <img style={{ width: '200px' }} src="images/empty-plant.png" />

@@ -1,0 +1,8 @@
+@import url('@fontsource/cairo/index.css');    html {
+      --lumo-primary-color: hsl(93, 92%, 21%);
+      --lumo-primary-color-50pct: hsla(93, 92%, 21%, 0.5);
+      --lumo-primary-color-10pct: hsla(93, 92%, 21%, 0.1);
+      --lumo-primary-text-color: hsl(93, 92%, 21%);
+--lumo-font-family: Cairo;
+
+    }
