@@ -2,7 +2,7 @@ import { ViewConfig } from '@vaadin/hilla-file-router/types.js';
 
 export const config: ViewConfig = {
   menu: { order: 3, icon: 'line-awesome/svg/industry-solid.svg' },
-  title: 'Delegation',
+  title: 'Delegations',
 };
 
 export default function DelegationView() {
