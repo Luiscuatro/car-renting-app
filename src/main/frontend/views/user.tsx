@@ -1,13 +1,34 @@
-import { ViewConfig } from '@vaadin/hilla-file-router/types.js';
+import { useState } from 'react';
+import { UserEndpoint } from 'Frontend/generated/endpoints.js';
+import  User  from 'Frontend/generated/com/example/application/model/User';
 
-export const config: ViewConfig = { menu: { order: 1, icon: 'line-awesome/svg/user.svg' }, title: 'User' };
+export default function CreateUserView() {
+  const [userId, setUserId] = useState('');
+  const [fullName, setFullName] = useState('');
 
-export default function UserView() {
+  const handleSave = async () => {
+    const user: User = {
+      pk: `USER#${userId}`,
+      sk: 'PROFILE',
+      userId,
+      fullName,
+      email: `${userId}@example.com`,
+      phoneNumber: '600123456',
+      licenseNumber: 'ABC123',
+      admin: false,
+      bookings: [],
+    };
+
+    await UserEndpoint.saveUser(user);
+    alert('Usuario guardado');
+  };
+
   return (
-    <div className="flex flex-col h-full items-center justify-center p-l text-center box-border">
-      <img style={{ width: '200px' }} src="images/empty-plant.png" />
-      <h2>This place intentionally left empty</h2>
-      <p>It’s a place where you can grow your own UI 🤗</p>
+    <div>
+      <h2>Crear usuario</h2>
+      <input placeholder="User ID" value={userId} onChange={e => setUserId(e.target.value)} />
+      <input placeholder="Nombre completo" value={fullName} onChange={e => setFullName(e.target.value)} />
+      <button onClick={handleSave}>Guardar</button>
     </div>
   );
 }

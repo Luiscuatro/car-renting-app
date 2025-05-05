@@ -20,7 +20,7 @@ public class User {
     private String email;
     private String phoneNumber;
     private String licenseNumber;
-    private boolean isAdmin;
+    private boolean admin;
     private List<Booking> bookings;
 
 
@@ -75,11 +75,11 @@ public class User {
     }
 
     public boolean isAdmin() {
-        return isAdmin;
+        return admin;
     }
 
     public void setAdmin(boolean admin) {
-        isAdmin = admin;
+        this.admin = admin;
     }
 
     public List<Booking> getBookings() {
