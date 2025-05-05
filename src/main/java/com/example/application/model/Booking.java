@@ -1,5 +1,8 @@
 package com.example.application.model;
 
+import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbBean;
+
+@DynamoDbBean
 public class Booking {
     private String bookingId;
     private String startDate;

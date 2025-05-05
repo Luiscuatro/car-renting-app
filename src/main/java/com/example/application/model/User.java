@@ -1,10 +1,12 @@
 package com.example.application.model;
 
+import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbBean;
 import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbPartitionKey;
 import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbSortKey;
 
 import java.util.List;
 
+@DynamoDbBean
 public class User {
     // Partition Key: identifica de manera única varios ítems relacionados al usuario
     // formato: "USER#<id>"
