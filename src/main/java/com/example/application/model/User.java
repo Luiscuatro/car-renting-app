@@ -3,6 +3,8 @@ package com.example.application.model;
 import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbPartitionKey;
 import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbSortKey;
 
+import java.util.List;
+
 public class User {
     // Partition Key: identifica de manera única varios ítems relacionados al usuario
     // formato: "USER#<id>"
@@ -17,6 +19,8 @@ public class User {
     private String phoneNumber;
     private String licenseNumber;
     private boolean isAdmin;
+    private List<Booking> bookings;
+
 
     @DynamoDbPartitionKey // indica que este es el campo Partition Key en DynamoDB
     public String getPk() { return pk; }
@@ -74,6 +78,14 @@ public class User {
 
     public void setAdmin(boolean admin) {
         isAdmin = admin;
+    }
+
+    public List<Booking> getBookings() {
+        return bookings;
+    }
+
+    public void setBookings(List<Booking> bookings) {
+        this.bookings = bookings;
     }
 }
 
