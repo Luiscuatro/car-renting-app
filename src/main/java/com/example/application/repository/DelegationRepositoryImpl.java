@@ -15,7 +15,7 @@ public class DelegationRepositoryImpl {
 
     @Autowired
     public DelegationRepositoryImpl(DynamoDbEnhancedClient enhancedClient) {
-        this.delegationTable = enhancedClient.table("UsersTable", TableSchema.fromBean(Delegation.class));
+        this.delegationTable = enhancedClient.table("DelegationsTable", TableSchema.fromBean(Delegation.class));
     }
 
     public void saveDelegation(Delegation delegation) {
