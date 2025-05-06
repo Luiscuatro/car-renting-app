@@ -14,7 +14,6 @@ import software.amazon.awssdk.enhanced.dynamodb.DynamoDbTable;
 import software.amazon.awssdk.enhanced.dynamodb.Key;
 import software.amazon.awssdk.enhanced.dynamodb.TableSchema;
 
-// Importa las clases necesarias para usar DynamoDB con objetos Java (Enhanced Client)
 
 
 @Repository  // Marca esta clase como un bean Spring de tipo repositorio
@@ -33,17 +32,7 @@ public class UserRepositoryImpl {
 
     // Metodo para guardar un usuario (con sus bookings embebidos si los tiene)
     public void saveUser(User user) {
-        try {
-            System.out.println("------ GUARDANDO USER ------");
-            System.out.println("UserId: " + user.getUserId());
-            System.out.println("PK: " + user.getPk());
-            System.out.println("SK: " + user.getSk());
-            userTable.putItem(user);
-            System.out.println("------ GUARDADO OK ------");
-        } catch (Exception e) {
-            System.err.println("Error al guardar usuario: " + e.getMessage());
-            e.printStackTrace();
-        }
+        userTable.putItem(user);  // Inserta o actualiza el ítem en la tabla
     }
 
     // Metodo para obtener un usuario por su ID
