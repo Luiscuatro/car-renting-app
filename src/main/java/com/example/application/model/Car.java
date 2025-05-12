@@ -4,29 +4,13 @@ import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbBean;
 
 @DynamoDbBean
 public class Car {
-    private String id;
+    private String carId;
     private String brand;
     private String model;
     private String year;
     private String color;
     private String type;
-    private boolean rented;
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public boolean isRented() {
-        return rented;
-    }
-
-    public void setRented(boolean rented) {
-        this.rented = rented;
-    }
+    private String plateNumber;
 
     public String getType() {
         return type;
@@ -66,5 +50,21 @@ public class Car {
 
     public void setColor(String color) {
         this.color = color;
+    }
+
+    public String getCarId() {
+        return carId;
+    }
+
+    public void setCarId(String carId) {
+        this.carId = carId;
+    }
+
+    public String getPlateNumber() {
+        return plateNumber;
+    }
+
+    public void setPlateNumber(String plateNumber) {
+        this.plateNumber = plateNumber;
     }
 }
