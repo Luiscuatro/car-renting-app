@@ -16,6 +16,7 @@ public class Delegation {
     private String name;
     private String city;
     private String address;
+    private List<Car> cars;
 
     @DynamoDbPartitionKey
     public String getDelegationId() {
@@ -55,5 +56,13 @@ public class Delegation {
 
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    public List<Car> getCars() {
+        return cars;
+    }
+
+    public void setCars(List<Car> cars) {
+        this.cars = cars;
     }
 }
