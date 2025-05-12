@@ -23,9 +23,8 @@ export default function CreateUserView() {
 
   const handleSave = async () => {
     const user: User = {
-      pk: `USER#${userId}`,
-      sk: 'PROFILE',
       userId,
+      operation: 'profile',
       fullName,
       email,
       phoneNumber,
@@ -41,25 +40,54 @@ export default function CreateUserView() {
   return (
     <div>
       <h2>Crear usuario</h2>
-      <input placeholder="User ID" value={userId} onChange={e => setUserId(e.target.value)} />
-      <input placeholder="Nombre completo" value={fullName} onChange={e => setFullName(e.target.value)} />
-      <input placeholder="Email" value={email} onChange={e => setEmail(e.target.value)} />
-      <input placeholder="Teléfono" value={phoneNumber} onChange={e => setPhoneNumber(e.target.value)} />
-      <input placeholder="Licencia" value={licenseNumber} onChange={e => setLicenseNumber(e.target.value)} />
+      <input
+        placeholder="User ID"
+        value={userId}
+        onChange={e => setUserId(e.target.value)}
+      />
+      <input
+        placeholder="Nombre completo"
+        value={fullName}
+        onChange={e => setFullName(e.target.value)}
+      />
+      <input
+        placeholder="Email"
+        value={email}
+        onChange={e => setEmail(e.target.value)}
+      />
+      <input
+        placeholder="Teléfono"
+        value={phoneNumber}
+        onChange={e => setPhoneNumber(e.target.value)}
+      />
+      <input
+        placeholder="Licencia"
+        value={licenseNumber}
+        onChange={e => setLicenseNumber(e.target.value)}
+      />
       <label>
         Admin:
-        <input type="checkbox" checked={admin} onChange={e => setAdmin(e.target.checked)} />
+        <input
+          type="checkbox"
+          checked={admin}
+          onChange={e => setAdmin(e.target.checked)}
+        />
       </label>
-      <h2>Añadir Booking</h2>
+
+      <h3>Añadir Booking</h3>
       <input
         placeholder="Booking ID"
         value={currentBooking.bookingId || ''}
-        onChange={e => setCurrentBooking({ ...currentBooking, bookingId: e.target.value })}
+        onChange={e =>
+          setCurrentBooking({ ...currentBooking, bookingId: e.target.value })
+        }
       />
       <input
         placeholder="Car ID"
         value={currentBooking.carId || ''}
-        onChange={e => setCurrentBooking({ ...currentBooking, carId: e.target.value })}
+        onChange={e =>
+          setCurrentBooking({ ...currentBooking, carId: e.target.value })
+        }
       />
       <DatePicker
         label="Start Date"
@@ -89,7 +117,9 @@ export default function CreateUserView() {
       <input
         placeholder="Status"
         value={currentBooking.status || ''}
-        onChange={e => setCurrentBooking({ ...currentBooking, status: e.target.value })}
+        onChange={e =>
+          setCurrentBooking({ ...currentBooking, status: e.target.value })
+        }
       />
       <button onClick={addBooking}>Añadir Booking</button>
 
@@ -107,3 +137,4 @@ export default function CreateUserView() {
     </div>
   );
 }
+``

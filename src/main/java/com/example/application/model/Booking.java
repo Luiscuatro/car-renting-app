@@ -7,7 +7,6 @@ public class Booking {
     private String bookingId;
     private String startDate;
     private String endDate;
-    private String userId;
     private String carId;
     private int price;
     private String status;
@@ -35,14 +34,6 @@ public class Booking {
 
     public void setEndDate(String endDate) {
         this.endDate = endDate;
-    }
-
-    public String getUserId() {
-        return userId;
-    }
-
-    public void setUserId(String userId) {
-        this.userId = userId;
     }
 
     public String getCarId() {
