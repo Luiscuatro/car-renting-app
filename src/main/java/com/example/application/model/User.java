@@ -8,14 +8,9 @@ import java.util.List;
 
 @DynamoDbBean
 public class User {
-    // Partition Key: identifica de manera única varios ítems relacionados al usuario
-    // formato: "USER#<id>"
-    private String pk;
-    // Sort Key: permite diferenciar tipos de datos bajo el mismo usuario
-    // puede ser "PROFILE" para datos personales o "BOOKING#<id>" para una reserva
-    private String sk;
-
     private String userId;
+    private String operation;
+
     private String fullName;
     private String email;
     private String phoneNumber;
@@ -24,22 +19,21 @@ public class User {
     private List<Booking> bookings;
 
 
-    @DynamoDbPartitionKey // indica que este es el campo Partition Key en DynamoDB
-    public String getPk() { return pk; }
-    public void setPk(String pk) { this.pk = pk; }
-
-    @DynamoDbSortKey // indica que este es el campo Sort Key en DynamoDB
-    public String getSk() { return sk; }
-    public void setSk(String sk) { this.sk = sk; }
-
-    // getters y setters
-
+    @DynamoDbPartitionKey
     public String getUserId() {
         return userId;
     }
-
     public void setUserId(String userId) {
         this.userId = userId;
+    }
+
+    @DynamoDbSortKey
+    public String getOperation() {
+        return operation;
+    }
+
+    public void setOperation(String operation) {
+        this.operation = operation;
     }
 
     public String getFullName() {
