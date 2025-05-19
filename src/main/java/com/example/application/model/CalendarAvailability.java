@@ -10,7 +10,7 @@ import java.util.List;
 public class CalendarAvailability {
 
     private String carId;
-g    private String operation;
+    private String operation;
 
     private List<String> availableDates;
 
