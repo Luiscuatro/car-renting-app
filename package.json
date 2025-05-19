@@ -3,7 +3,10 @@
   "license": "UNLICENSED",
   "type": "module",
   "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
     "@fontsource/cairo": "4.5.0",
+    "@mui/material": "^7.1.0",
     "@polymer/polymer": "3.5.2",
     "@vaadin/bundles": "24.7.3",
     "@vaadin/common-frontend": "0.0.19",
@@ -125,7 +128,7 @@
       "workbox-core": "7.3.0",
       "workbox-precaching": "7.3.0"
     },
-    "hash": "8615df4f9ac3d83d22a4936d1e63254c6adf48579c974e910e0b90e80ab244fe"
+    "hash": "1af07c935e7e7530862e74f0dc990b1aeae96bd24344495de7c655c5cedfd0da"
   },
   "overrides": {
     "@vaadin/bundles": "$@vaadin/bundles",
@@ -165,6 +168,9 @@
     "@vaadin/vaadin-lumo-styles": "$@vaadin/vaadin-lumo-styles",
     "@vaadin/vaadin-material-styles": "$@vaadin/vaadin-material-styles",
     "react-router": "$react-router",
-    "@fontsource/cairo": "$@fontsource/cairo"
+    "@fontsource/cairo": "$@fontsource/cairo",
+    "@emotion/react": "$@emotion/react",
+    "@emotion/styled": "$@emotion/styled",
+    "@mui/material": "$@mui/material"
   }
 }

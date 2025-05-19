@@ -1,113 +1,96 @@
-import { useState } from 'react';
-import { DelegationEndpoint } from 'Frontend/generated/endpoints.js';
-import Delegation from 'Frontend/generated/com/example/application/model/Delegation';
-import Car from 'Frontend/generated/com/example/application/model/Car';
+import { useState, useEffect } from 'react';
+import { TextField } from '@mui/material';
+import { DelegationEndpoint } from 'Frontend/generated/endpoints';
 
-export default function CreateDelegationView() {
+export default function DelegationsView() {
   const [delegationId, setDelegationId] = useState('');
   const [name, setName] = useState('');
   const [city, setCity] = useState('');
   const [address, setAddress] = useState('');
+  const [status, setStatus] = useState<string | null>(null);
+  const [delegations, setDelegations] = useState<any[]>([]);
 
-  const [cars, setCars] = useState<Car[]>([]);
-  const [currentCar, setCurrentCar] = useState<Partial<Car>>({});
-
-  const addCar = () => {
-    if (!currentCar.carId) return;
-    setCars([...cars, currentCar as Car]);
-    setCurrentCar({});
+  const handleSubmit = async () => {
+    try {
+      await DelegationEndpoint.saveDelegation({
+        delegationId: delegationId.trim(),
+        operation: 'DATA',
+        name,
+        city,
+        address,
+        cars: []
+      });
+      setStatus('Delegación guardada correctamente.');
+      fetchDelegations();
+    } catch (error) {
+      setStatus('Error al guardar delegación.');
+      console.error(error);
+    }
   };
 
-  const handleSave = async () => {
-    const delegation: Delegation = {
-      delegationId,
-      operation: 'data',
-      name,
-      city,
-      address,
-      cars,
-    };
-
-    await DelegationEndpoint.saveDelegation(delegation);
-    alert('Delegación guardada');
+  const fetchDelegations = async () => {
+    try {
+      const result = await DelegationEndpoint.getAllDelegations();
+      setDelegations(result ?? []);
+    } catch (error) {
+      console.error('Error al cargar delegaciones:', error);
+    }
   };
+
+  useEffect(() => {
+    fetchDelegations();
+  }, []);
 
   return (
-    <div>
-      <h2>Crear Delegación</h2>
-      <input
-        placeholder="Delegation ID"
+    <div className="p-4 max-w-lg mx-auto">
+      <h2 className="text-xl font-bold mb-4">Crear nueva delegación</h2>
+
+      <TextField
+        label="ID de la delegación (ej: DEL#BCN)"
+        fullWidth
         value={delegationId}
-        onChange={e => setDelegationId(e.target.value)}
+        onChange={(e) => setDelegationId(e.target.value)}
+        className="mb-4"
       />
-      <input
-        placeholder="Nombre"
+      <TextField
+        label="Nombre"
+        fullWidth
         value={name}
-        onChange={e => setName(e.target.value)}
+        onChange={(e) => setName(e.target.value)}
+        className="mb-4"
       />
-      <input
-        placeholder="Ciudad"
+      <TextField
+        label="Ciudad"
+        fullWidth
         value={city}
-        onChange={e => setCity(e.target.value)}
+        onChange={(e) => setCity(e.target.value)}
+        className="mb-4"
       />
-      <input
-        placeholder="Dirección"
+      <TextField
+        label="Dirección"
+        fullWidth
         value={address}
-        onChange={e => setAddress(e.target.value)}
+        onChange={(e) => setAddress(e.target.value)}
+        className="mb-4"
       />
 
-      <h3>Añadir coche</h3>
-      <input
-        placeholder="Car ID"
-        value={currentCar.carId || ''}
-        onChange={e => setCurrentCar({ ...currentCar, carId: e.target.value })}
-      />
-      <input
-        placeholder="Marca"
-        value={currentCar.brand || ''}
-        onChange={e => setCurrentCar({ ...currentCar, brand: e.target.value })}
-      />
-      <input
-        placeholder="Modelo"
-        value={currentCar.model || ''}
-        onChange={e => setCurrentCar({ ...currentCar, model: e.target.value })}
-      />
-      <input
-        placeholder="Año"
-        value={currentCar.year || ''}
-        onChange={e => setCurrentCar({ ...currentCar, year: e.target.value })}
-      />
-      <input
-        placeholder="Color"
-        value={currentCar.color || ''}
-        onChange={e => setCurrentCar({ ...currentCar, color: e.target.value })}
-      />
-      <input
-        placeholder="Matrícula"
-        value={currentCar.plateNumber || ''}
-        onChange={e =>
-          setCurrentCar({ ...currentCar, plateNumber: e.target.value })
-        }
-      />
-      <input
-        placeholder="Tipo (SUV, compacto...)"
-        value={currentCar.type || ''}
-        onChange={e => setCurrentCar({ ...currentCar, type: e.target.value })}
-      />
+      <button
+        onClick={handleSubmit}
+        className="mt-2 px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition"
+      >
+        Guardar delegación
+      </button>
 
-      <button onClick={addCar}>Añadir coche</button>
+      {status && <p className="mt-4 text-sm text-gray-700">{status}</p>}
 
-      <h4>Coches añadidos:</h4>
-      <ul>
-        {cars.map((c, index) => (
-          <li key={index}>
-            {c.carId} - {c.brand} {c.model} ({c.plateNumber})
-          </li>
-        ))}
-      </ul>
-
-      <br />
-      <button onClick={handleSave}>Guardar Delegación</button>
+      <div className="mt-8">
+        <h3 className="text-lg font-semibold mb-2">Delegaciones existentes</h3>
+        <ul className="list-disc list-inside">
+          {delegations.map((d) => (
+            <li key={d.delegationId}>{d.delegationId} - {d.name}, {d.city}</li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 }

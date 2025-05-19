@@ -8,6 +8,10 @@ import software.amazon.awssdk.enhanced.dynamodb.DynamoDbTable;
 import software.amazon.awssdk.enhanced.dynamodb.Key;
 import software.amazon.awssdk.enhanced.dynamodb.TableSchema;
 import software.amazon.awssdk.enhanced.dynamodb.model.GetItemEnhancedRequest;
+import software.amazon.awssdk.enhanced.dynamodb.model.QueryConditional;
+
+import java.util.List;
+import java.util.stream.Collectors;
 
 @Repository
 public class DelegationRepositoryImpl {
@@ -19,6 +23,14 @@ public class DelegationRepositoryImpl {
         this.delegationTable = enhancedClient.table("DelegationsTable", TableSchema.fromBean(Delegation.class));
 
     }
+
+    public List<Delegation> getAllDelegations() {
+        return delegationTable.scan().items().stream()
+                .filter(item -> "DATA".equals(item.getOperation()))
+                .collect(Collectors.toList());
+    }
+
+
 
     public void saveDelegation(Delegation delegation) {
         try {

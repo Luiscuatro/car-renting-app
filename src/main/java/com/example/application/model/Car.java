@@ -1,9 +1,14 @@
 package com.example.application.model;
 
 import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbBean;
+import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbPartitionKey;
+import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbSortKey;
 
 @DynamoDbBean
 public class Car {
+    private String delegationId; // PK
+    private String operation;    // SK → CAR#matrícula
+
     private String carId;
     private String brand;
     private String model;
@@ -12,28 +17,30 @@ public class Car {
     private String type;
     private String plateNumber;
 
-    public String getType() {
-        return type;
+    @DynamoDbPartitionKey
+    public String getDelegationId() {
+        return delegationId;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public void setDelegationId(String delegationId) {
+        this.delegationId = delegationId;
     }
 
-    public String getYear() {
-        return year;
+    @DynamoDbSortKey
+    public String getOperation() {
+        return operation;
     }
 
-    public void setYear(String year) {
-        this.year = year;
+    public void setOperation(String operation) {
+        this.operation = operation;
     }
 
-    public String getModel() {
-        return model;
+    public String getCarId() {
+        return carId;
     }
 
-    public void setModel(String model) {
-        this.model = model;
+    public void setCarId(String carId) {
+        this.carId = carId;
     }
 
     public String getBrand() {
@@ -44,6 +51,22 @@ public class Car {
         this.brand = brand;
     }
 
+    public String getModel() {
+        return model;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    public String getYear() {
+        return year;
+    }
+
+    public void setYear(String year) {
+        this.year = year;
+    }
+
     public String getColor() {
         return color;
     }
@@ -52,12 +75,12 @@ public class Car {
         this.color = color;
     }
 
-    public String getCarId() {
-        return carId;
+    public String getType() {
+        return type;
     }
 
-    public void setCarId(String carId) {
-        this.carId = carId;
+    public void setType(String type) {
+        this.type = type;
     }
 
     public String getPlateNumber() {
