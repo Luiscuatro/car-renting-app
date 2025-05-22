@@ -23,8 +23,9 @@ public class DelegationEndpoint {
     public void saveCar(Car car, String delegationId) {
         car.setDelegationId(delegationId);
         car.setOperation("CAR#" + car.getPlateNumber());
-        delegationTable.putItem(car);
+        delegationRepository.saveCar(car);
     }
+
 
 
     public List<Delegation> getAllDelegations() {

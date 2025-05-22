@@ -9,13 +9,13 @@ public class Car {
     private String delegationId; // PK
     private String operation;    // SK → CAR#matrícula
 
-    private String carId;
+    private String plateNumber;
     private String brand;
     private String model;
     private String year;
     private String color;
     private String type;
-    private String plateNumber;
+
 
     @DynamoDbPartitionKey
     public String getDelegationId() {
@@ -35,13 +35,6 @@ public class Car {
         this.operation = operation;
     }
 
-    public String getCarId() {
-        return carId;
-    }
-
-    public void setCarId(String carId) {
-        this.carId = carId;
-    }
 
     public String getBrand() {
         return brand;
