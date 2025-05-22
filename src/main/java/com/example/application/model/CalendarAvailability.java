@@ -9,18 +9,17 @@ import java.util.List;
 @DynamoDbBean
 public class CalendarAvailability {
 
-    private String carId;
+    private String delegationId;
     private String operation;
-
     private List<String> availableDates;
 
     @DynamoDbPartitionKey
-    public String getCarId() {
-        return carId;
+    public String getDelegationId() {
+        return delegationId;
     }
 
-    public void setCarId(String carId) {
-        this.carId = carId;
+    public void setDelegationId(String delegationId) {
+        this.delegationId = delegationId;
     }
 
     @DynamoDbSortKey

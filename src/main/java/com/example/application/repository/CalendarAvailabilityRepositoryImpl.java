@@ -2,11 +2,12 @@ package com.example.application.repository;
 
 import com.example.application.model.CalendarAvailability;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
-import software.amazon.awssdk.enhanced.dynamodb.*;
+import software.amazon.awssdk.enhanced.dynamodb.DynamoDbEnhancedClient;
+import software.amazon.awssdk.enhanced.dynamodb.DynamoDbTable;
+import software.amazon.awssdk.enhanced.dynamodb.Key;
+import software.amazon.awssdk.enhanced.dynamodb.TableSchema;
 import software.amazon.awssdk.enhanced.dynamodb.model.GetItemEnhancedRequest;
 
-@Repository
 public class CalendarAvailabilityRepositoryImpl {
 
     private final DynamoDbTable<CalendarAvailability> calendarTable;
@@ -17,17 +18,13 @@ public class CalendarAvailabilityRepositoryImpl {
     }
 
     public void saveCalendar(CalendarAvailability calendarAvailability) {
-        try {
-            calendarTable.putItem(calendarAvailability);
-        } catch (Exception e) {
-            System.err.println("Error al guardar disponibilidad: " + e.getMessage());
-        }
+        calendarTable.putItem(calendarAvailability);
     }
 
-    public CalendarAvailability getCalendar(String carId) {
+    public CalendarAvailability getCalendar(String delegationId, String plateNumber) {
         Key key = Key.builder()
-                .partitionValue(carId)
-                .sortValue("calendar")
+                .partitionValue(delegationId)
+                .sortValue("CALENDAR#CAR#" + plateNumber)
                 .build();
 
         return calendarTable.getItem(GetItemEnhancedRequest.builder().key(key).build());

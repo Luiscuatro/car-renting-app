@@ -5,7 +5,6 @@ import { DelegationEndpoint } from 'Frontend/generated/endpoints';
 export default function CreateCarForm() {
   const [delegations, setDelegations] = useState<any[]>([]);
   const [delegationId, setDelegationId] = useState('');
-  const [carId, setCarId] = useState('');
   const [brand, setBrand] = useState('');
   const [model, setModel] = useState('');
   const [year, setYear] = useState('');
@@ -25,11 +24,15 @@ export default function CreateCarForm() {
 
   const handleSubmit = async () => {
     try {
-      const response = await DelegationEndpoint.saveDelegation({
-        delegationId,
-        operation: `CAR#${plateNumber}`,
-        cars: [{ carId, brand, model, year, plateNumber, color, type }]
-      });
+      await DelegationEndpoint.saveCar({
+        plateNumber,
+        brand,
+        model,
+        year,
+        color,
+        type
+      }, delegationId);
+
       setStatus('Coche guardado correctamente.');
     } catch (error) {
       console.error(error);
@@ -55,7 +58,6 @@ export default function CreateCarForm() {
         ))}
       </select>
 
-      <TextField label="Car ID" fullWidth className="mb-4" value={carId} onChange={(e) => setCarId(e.target.value)} />
       <TextField label="Marca" fullWidth className="mb-4" value={brand} onChange={(e) => setBrand(e.target.value)} />
       <TextField label="Modelo" fullWidth className="mb-4" value={model} onChange={(e) => setModel(e.target.value)} />
       <TextField label="Año" fullWidth className="mb-4" value={year} onChange={(e) => setYear(e.target.value)} />

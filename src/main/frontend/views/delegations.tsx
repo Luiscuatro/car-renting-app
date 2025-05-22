@@ -13,12 +13,11 @@ export default function DelegationsView() {
   const handleSubmit = async () => {
     try {
       await DelegationEndpoint.saveDelegation({
-        delegationId: delegationId.trim(),
+        delegationId: `DEL#${delegationId.trim().toUpperCase()}`,
         operation: 'DATA',
         name,
         city,
-        address,
-        cars: []
+        address
       });
       setStatus('Delegación guardada correctamente.');
       fetchDelegations();
@@ -46,7 +45,7 @@ export default function DelegationsView() {
       <h2 className="text-xl font-bold mb-4">Crear nueva delegación</h2>
 
       <TextField
-        label="ID de la delegación (ej: DEL#BCN)"
+        label="ID corta de la delegación (ej: BCN, ZAR, VEN)"
         fullWidth
         value={delegationId}
         onChange={(e) => setDelegationId(e.target.value)}

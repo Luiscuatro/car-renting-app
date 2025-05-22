@@ -21,7 +21,8 @@ public class CalendarAvailabilityEndpoint {
         repository.saveCalendar(calendarAvailability);
     }
 
-    public CalendarAvailability getCalendarAvailability(String carId) {
-        return repository.getCalendar(carId);
+    public CalendarAvailability getCalendarAvailability(String delegationId, String plateNumber) {
+        return repository.getCalendar(delegationId, plateNumber);
     }
+
 }
