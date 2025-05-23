@@ -1,5 +1,6 @@
 package com.example.application.repository;
 
+import com.example.application.model.CalendarAvailability;
 import com.example.application.model.Car;
 import com.example.application.model.Delegation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +11,8 @@ import software.amazon.awssdk.enhanced.dynamodb.Key;
 import software.amazon.awssdk.enhanced.dynamodb.TableSchema;
 import software.amazon.awssdk.enhanced.dynamodb.model.GetItemEnhancedRequest;
 
+import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -18,12 +21,13 @@ public class DelegationRepositoryImpl {
 
     private final DynamoDbTable<Delegation> delegationTable;
     private final DynamoDbTable<Car> carTable;
-
+    private final DynamoDbTable<CalendarAvailability> calendarTable;
 
     @Autowired
     public DelegationRepositoryImpl(DynamoDbEnhancedClient enhancedClient) {
         this.delegationTable = enhancedClient.table("DelegationsTable", TableSchema.fromBean(Delegation.class));
         this.carTable = enhancedClient.table("DelegationsTable", TableSchema.fromBean(Car.class));
+        this.calendarTable = enhancedClient.table("DelegationsTable", TableSchema.fromBean(CalendarAvailability.class));
     }
 
     public List<Delegation> getAllDelegations() {
@@ -31,8 +35,6 @@ public class DelegationRepositoryImpl {
                 .filter(item -> "DATA".equals(item.getOperation()))
                 .collect(Collectors.toList());
     }
-
-
 
     public void saveDelegation(Delegation delegation) {
         try {
@@ -49,9 +51,20 @@ public class DelegationRepositoryImpl {
 
     public void saveCar(Car car) {
         carTable.putItem(car);
+
+        List<String> availableDates = new ArrayList<>();
+        LocalDate today = LocalDate.now();
+        for (int i = 0; i <= 180; i++) {
+            availableDates.add(today.plusDays(i).toString()); // formato YYYY-MM-DD
+        }
+
+        CalendarAvailability calendar = new CalendarAvailability();
+        calendar.setDelegationId(car.getDelegationId());
+        calendar.setOperation("CALENDAR#CAR#" + car.getPlateNumber());
+        calendar.setAvailableDates(availableDates);
+
+        calendarTable.putItem(calendar);
     }
-
-
 
     public Delegation getDelegation(String delegationId) {
         Key key = Key.builder()
@@ -60,7 +73,12 @@ public class DelegationRepositoryImpl {
                 .build();
         return delegationTable.getItem(GetItemEnhancedRequest.builder().key(key).build());
     }
+
+    public CalendarAvailability getCalendar(String delegationId, String plateNumber) {
+        Key key = Key.builder()
+                .partitionValue(delegationId)
+                .sortValue("CALENDAR#CAR#" + plateNumber)
+                .build();
+        return calendarTable.getItem(GetItemEnhancedRequest.builder().key(key).build());
+    }
 }
-
-
-
