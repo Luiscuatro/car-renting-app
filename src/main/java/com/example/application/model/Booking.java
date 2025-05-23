@@ -1,53 +1,61 @@
 package com.example.application.model;
 
 import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbBean;
+import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbPartitionKey;
+import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbSortKey;
+
+import java.util.List;
 
 @DynamoDbBean
 public class Booking {
-    private String bookingId;
-    private String startDate;
-    private String endDate;
-    private String carId;
+    private String userId;
+    private String operation;
+    private String delegationId;
+    private String plateNumber;
+    private List<String> bookedDates;
     private int price;
     private String status;
 
-
-    public String getBookingId() {
-        return bookingId;
+    @DynamoDbPartitionKey
+    public String getUserId() {
+        return userId;
+    }
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 
-    public void setBookingId(String bookingId) {
-        this.bookingId = bookingId;
+    @DynamoDbSortKey
+    public String getOperation() {
+        return operation;
+    }
+    public void setOperation(String operation) {
+        this.operation = operation;
     }
 
-    public String getStartDate() {
-        return startDate;
+    public String getDelegationId() {
+        return delegationId;
+    }
+    public void setDelegationId(String delegationId) {
+        this.delegationId = delegationId;
     }
 
-    public void setStartDate(String startDate) {
-        this.startDate = startDate;
+    public String getPlateNumber() {
+        return plateNumber;
+    }
+    public void setPlateNumber(String plateNumber) {
+        this.plateNumber = plateNumber;
     }
 
-    public String getEndDate() {
-        return endDate;
+    public List<String> getBookedDates() {
+        return bookedDates;
     }
-
-    public void setEndDate(String endDate) {
-        this.endDate = endDate;
-    }
-
-    public String getCarId() {
-        return carId;
-    }
-
-    public void setCarId(String carId) {
-        this.carId = carId;
+    public void setBookedDates(List<String> bookedDates) {
+        this.bookedDates = bookedDates;
     }
 
     public int getPrice() {
         return price;
     }
-
     public void setPrice(int price) {
         this.price = price;
     }
@@ -55,7 +63,6 @@ public class Booking {
     public String getStatus() {
         return status;
     }
-
     public void setStatus(String status) {
         this.status = status;
     }
