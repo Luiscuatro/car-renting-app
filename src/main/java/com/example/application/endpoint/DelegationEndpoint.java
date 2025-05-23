@@ -8,7 +8,10 @@ import com.vaadin.flow.server.auth.AnonymousAllowed;
 import com.vaadin.hilla.Endpoint;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Endpoint
 @AnonymousAllowed // temporal hasta integrar Cognito
@@ -38,6 +41,28 @@ public class DelegationEndpoint {
     public List<Delegation> getAllDelegations() {
         return repository.getAllDelegations();
     }
+
+    public List<Car> getAvailableCars(String delegationId, String startDate, String endDate) {
+        DelegationRepositoryImpl delegationRepository;
+        List<Car> cars = repository.getCarsByDelegation(delegationId);
+        List<Car> availableCars = new ArrayList<>();
+
+        LocalDate start = LocalDate.parse(startDate);
+        LocalDate end = LocalDate.parse(endDate);
+        List<String> dateRange = start.datesUntil(end.plusDays(1))
+                .map(LocalDate::toString)
+                .collect(Collectors.toList());
+
+        for (Car car : cars) {
+            CalendarAvailability calendar = repository.getCalendar(delegationId, car.getPlateNumber());
+            if (calendar != null && calendar.getAvailableDates().containsAll(dateRange)) {
+                availableCars.add(car);
+            }
+        }
+
+        return availableCars;
+    }
+
 
     public Delegation getDelegation(String delegationId) {
         return repository.getDelegation(delegationId);

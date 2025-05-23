@@ -4,8 +4,6 @@ import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbBean;
 import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbPartitionKey;
 import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbSortKey;
 
-import java.util.List;
-
 @DynamoDbBean
 public class User {
     private String userId;
@@ -16,8 +14,6 @@ public class User {
     private String phoneNumber;
     private String licenseNumber;
     private boolean admin;
-    private List<Booking> bookings;
-
 
     @DynamoDbPartitionKey
     public String getUserId() {
@@ -31,7 +27,6 @@ public class User {
     public String getOperation() {
         return operation;
     }
-
     public void setOperation(String operation) {
         this.operation = operation;
     }
@@ -39,7 +34,6 @@ public class User {
     public String getFullName() {
         return fullName;
     }
-
     public void setFullName(String fullName) {
         this.fullName = fullName;
     }
@@ -47,7 +41,6 @@ public class User {
     public String getEmail() {
         return email;
     }
-
     public void setEmail(String email) {
         this.email = email;
     }
@@ -55,7 +48,6 @@ public class User {
     public String getPhoneNumber() {
         return phoneNumber;
     }
-
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
@@ -63,7 +55,6 @@ public class User {
     public String getLicenseNumber() {
         return licenseNumber;
     }
-
     public void setLicenseNumber(String licenseNumber) {
         this.licenseNumber = licenseNumber;
     }
@@ -71,17 +62,7 @@ public class User {
     public boolean isAdmin() {
         return admin;
     }
-
     public void setAdmin(boolean admin) {
         this.admin = admin;
     }
-
-    public List<Booking> getBookings() {
-        return bookings;
-    }
-
-    public void setBookings(List<Booking> bookings) {
-        this.bookings = bookings;
-    }
 }
-

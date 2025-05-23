@@ -10,6 +10,7 @@ import software.amazon.awssdk.enhanced.dynamodb.DynamoDbTable;
 import software.amazon.awssdk.enhanced.dynamodb.Key;
 import software.amazon.awssdk.enhanced.dynamodb.TableSchema;
 import software.amazon.awssdk.enhanced.dynamodb.model.GetItemEnhancedRequest;
+import software.amazon.awssdk.enhanced.dynamodb.model.QueryConditional;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -81,4 +82,15 @@ public class DelegationRepositoryImpl {
                 .build();
         return calendarTable.getItem(GetItemEnhancedRequest.builder().key(key).build());
     }
+
+    public List<Car> getCarsByDelegation(String delegationId) {
+        return carTable.query(
+                        QueryConditional.keyEqualTo(Key.builder()
+                                .partitionValue(delegationId)
+                                .build()))
+                .items().stream()
+                .filter(item -> item.getOperation().startsWith("CAR#"))
+                .collect(Collectors.toList());
+    }
+
 }

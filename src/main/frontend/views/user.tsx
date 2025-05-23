@@ -16,7 +16,7 @@ export default function CreateUserView() {
   const [currentBooking, setCurrentBooking] = useState<Partial<Booking>>({});
 
   const addBooking = () => {
-    if (!currentBooking.bookingId) return;
+    if (!currentBooking.operation) return;
     setBookings([...bookings, currentBooking as Booking]);
     setCurrentBooking({});
   };
@@ -30,7 +30,6 @@ export default function CreateUserView() {
       phoneNumber,
       licenseNumber,
       admin,
-      bookings,
     };
 
     await UserEndpoint.saveUser(user);
@@ -77,16 +76,17 @@ export default function CreateUserView() {
       <h3>Añadir Booking</h3>
       <input
         placeholder="Booking ID"
-        value={currentBooking.bookingId || ''}
+        value={currentBooking.operation || ''}
         onChange={e =>
-          setCurrentBooking({ ...currentBooking, bookingId: e.target.value })
+            setCurrentBooking({ ...currentBooking, operation: e.target.value })
         }
+
       />
       <input
         placeholder="Car ID"
-        value={currentBooking.carId || ''}
+        value={currentBooking.plateNumber || ''}
         onChange={e =>
-          setCurrentBooking({ ...currentBooking, carId: e.target.value })
+          setCurrentBooking({ ...currentBooking, plateNumber: e.target.value })
         }
       />
       <DatePicker
@@ -127,7 +127,7 @@ export default function CreateUserView() {
       <ul>
         {bookings.map((b, index) => (
           <li key={index}>
-            {b.bookingId} - {b.carId} ({b.startDate} → {b.endDate})
+            {b.operation} - {b.plateNumber} ({b.startDate} → {b.endDate})
           </li>
         ))}
       </ul>

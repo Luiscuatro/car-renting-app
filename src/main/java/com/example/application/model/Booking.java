@@ -66,4 +66,19 @@ public class Booking {
     public void setStatus(String status) {
         this.status = status;
     }
+
+    public String getStartDate() {
+        if (bookedDates != null && !bookedDates.isEmpty()) {
+            return bookedDates.get(0);
+        }
+        return null;
+    }
+
+    public String getEndDate() {
+        if (bookedDates != null && !bookedDates.isEmpty()) {
+            return bookedDates.get(bookedDates.size() - 1);
+        }
+        return null;
+    }
+
 }
