@@ -1,5 +1,6 @@
 package com.example.application.endpoint;
 
+import com.example.application.model.Booking;
 import com.example.application.model.User;
 import com.example.application.repository.UserRepositoryImpl;
 import com.vaadin.flow.server.auth.AnonymousAllowed;
@@ -24,4 +25,9 @@ public class UserEndpoint {
     public User getUser(String userId) {
         return userRepository.getUser(userId);
     }
+
+    public void saveBooking(Booking booking) {
+        userRepository.saveBooking(booking);
+    }
+
 }
