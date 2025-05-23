@@ -1,18 +1,24 @@
 package com.example.application.repository;
 
 import com.example.application.model.User;
+import com.example.application.model.Booking;
+import com.example.application.model.CalendarAvailability;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import software.amazon.awssdk.enhanced.dynamodb.*;
 import software.amazon.awssdk.enhanced.dynamodb.model.GetItemEnhancedRequest;
 
+import java.util.List;
+
 @Repository
 public class UserRepositoryImpl {
 
     private final DynamoDbTable<User> userTable;
+    private final DynamoDbEnhancedClient enhancedClient;
 
     @Autowired
     public UserRepositoryImpl(DynamoDbEnhancedClient enhancedClient) {
+        this.enhancedClient = enhancedClient;
         this.userTable = enhancedClient.table("UsersTable", TableSchema.fromBean(User.class));
     }
 
@@ -32,9 +38,29 @@ public class UserRepositoryImpl {
     public User getUser(String userId) {
         Key key = Key.builder()
                 .partitionValue(userId)
-                .sortValue("profile") //
+                .sortValue("profile")
+                .build();
+        return userTable.getItem(GetItemEnhancedRequest.builder().key(key).build());
+    }
+
+    public void saveBooking(Booking booking) {
+        DynamoDbTable<Booking> bookingTable = enhancedClient.table("UsersTable", TableSchema.fromBean(Booking.class));
+        bookingTable.putItem(booking);
+
+        DynamoDbTable<CalendarAvailability> calendarTable = enhancedClient.table("DelegationsTable", TableSchema.fromBean(CalendarAvailability.class));
+
+        Key key = Key.builder()
+                .partitionValue(booking.getDelegationId())
+                .sortValue("CALENDAR#CAR#" + booking.getPlateNumber())
                 .build();
 
-        return userTable.getItem(GetItemEnhancedRequest.builder().key(key).build());
+        CalendarAvailability calendar = calendarTable.getItem(GetItemEnhancedRequest.builder().key(key).build());
+
+        if (calendar != null) {
+            List<String> current = calendar.getAvailableDates();
+            current.removeAll(booking.getBookedDates());
+            calendar.setAvailableDates(current);
+            calendarTable.putItem(calendar);
+        }
     }
 }
