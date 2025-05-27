@@ -1,0 +1,165 @@
+{"type": "delegation", "delegationId": "DEL#BAR", "operation": "DATA", "name": "Delegación de Barcelona", "city": "Barcelona", "address": "Carrer de Pau Claris, 100"}
+{"type": "delegation", "delegationId": "DEL#MAD", "operation": "DATA", "name": "Delegación de Madrid", "city": "Madrid", "address": "Calle de Alcalá, 45"}
+{"type": "delegation", "delegationId": "DEL#VAL", "operation": "DATA", "name": "Delegación de Valencia", "city": "Valencia", "address": "Avinguda del Port, 120"}
+{"type": "delegation", "delegationId": "DEL#SEV", "operation": "DATA", "name": "Delegación de Sevilla", "city": "Sevilla", "address": "Avenida de la Constitución, 23"}
+{"type": "delegation", "delegationId": "DEL#ZAR", "operation": "DATA", "name": "Delegación de Zaragoza", "city": "Zaragoza", "address": "Paseo de la Independencia, 30"}
+{"type": "delegation", "delegationId": "DEL#MÁL", "operation": "DATA", "name": "Delegación de Málaga", "city": "Málaga", "address": "Calle Larios, 15"}
+{"type": "delegation", "delegationId": "DEL#MUR", "operation": "DATA", "name": "Delegación de Murcia", "city": "Murcia", "address": "Gran Vía Alfonso X, 12"}
+{"type": "delegation", "delegationId": "DEL#PAL", "operation": "DATA", "name": "Delegación de Palma", "city": "Palma", "address": "Carrer de Sant Miquel, 18"}
+{"type": "delegation", "delegationId": "DEL#BIL", "operation": "DATA", "name": "Delegación de Bilbao", "city": "Bilbao", "address": "Gran Vía de Don Diego López de Haro, 50"}
+{"type": "delegation", "delegationId": "DEL#ALI", "operation": "DATA", "name": "Delegación de Alicante", "city": "Alicante", "address": "Avenida Maisonnave, 33"}
+{"type": "delegation", "delegationId": "DEL#CÓR", "operation": "DATA", "name": "Delegación de Córdoba", "city": "Córdoba", "address": "Calle Cruz Conde, 25"}
+{"type": "delegation", "delegationId": "DEL#VAL", "operation": "DATA", "name": "Delegación de Valladolid", "city": "Valladolid", "address": "Calle Santiago, 9"}
+{"type": "delegation", "delegationId": "DEL#GIJ", "operation": "DATA", "name": "Delegación de Gijón", "city": "Gijón", "address": "Calle Corrida, 14"}
+{"type": "delegation", "delegationId": "DEL#VIG", "operation": "DATA", "name": "Delegación de Vigo", "city": "Vigo", "address": "Rúa do Príncipe, 21"}
+{"type": "delegation", "delegationId": "DEL#SAN", "operation": "DATA", "name": "Delegación de San Sebastián", "city": "San Sebastián", "address": "Avenida de la Libertad, 5"}
+{"type": "Sedan", "delegationId": "DEL#CÓR", "operation": "CAR#2782XYZ", "brand": "Toyota", "color": "Gris", "model": "Corolla", "plateNumber": "2782XYZ", "year": "2016"}
+{"type": "Hatchback", "delegationId": "DEL#VAL", "operation": "CAR#9755MNO", "brand": "Kia", "color": "Blanco", "model": "Ceed", "plateNumber": "9755MNO", "year": "2015"}
+{"type": "Sedan", "delegationId": "DEL#ZAR", "operation": "CAR#6604ABC", "brand": "Renault", "color": "Azul", "model": "Megane", "plateNumber": "6604ABC", "year": "2019"}
+{"type": "Sedan", "delegationId": "DEL#BIL", "operation": "CAR#8315VWX", "brand": "Citroen", "color": "Gris", "model": "C4", "plateNumber": "8315VWX", "year": "2010"}
+{"type": "SUV", "delegationId": "DEL#PAL", "operation": "CAR#1503VWX", "brand": "Citroen", "color": "Negro", "model": "C5 Aircross", "plateNumber": "1503VWX", "year": "2016"}
+{"type": "Sedan", "delegationId": "DEL#BIL", "operation": "CAR#6947GHI", "brand": "Hyundai", "color": "Verde", "model": "i30", "plateNumber": "6947GHI", "year": "2018"}
+{"type": "Compact", "delegationId": "DEL#MUR", "operation": "CAR#8120ABC", "brand": "Peugeot", "color": "Gris", "model": "2008", "plateNumber": "8120ABC", "year": "2016"}
+{"type": "SUV", "delegationId": "DEL#SEV", "operation": "CAR#5464VWX", "brand": "Seat", "color": "Blanco", "model": "Arona", "plateNumber": "5464VWX", "year": "2022"}
+{"type": "Hatchback", "delegationId": "DEL#SAN", "operation": "CAR#5549JKL", "brand": "Ford", "color": "Gris", "model": "Puma", "plateNumber": "5549JKL", "year": "2010"}
+{"type": "Compact", "delegationId": "DEL#BAR", "operation": "CAR#3062XYZ", "brand": "Fiat", "color": "Verde", "model": "500", "plateNumber": "3062XYZ", "year": "2023"}
+{"type": "Compact", "delegationId": "DEL#CÓR", "operation": "CAR#7655GHI", "brand": "Peugeot", "color": "Verde", "model": "2008", "plateNumber": "7655GHI", "year": "2023"}
+{"type": "Sedan", "delegationId": "DEL#SEV", "operation": "CAR#8577VWX", "brand": "Peugeot", "color": "Blanco", "model": "208", "plateNumber": "8577VWX", "year": "2021"}
+{"type": "Sedan", "delegationId": "DEL#VIG", "operation": "CAR#7251STU", "brand": "Ford", "color": "Negro", "model": "Fiesta", "plateNumber": "7251STU", "year": "2014"}
+{"type": "Hatchback", "delegationId": "DEL#BAR", "operation": "CAR#5173GHI", "brand": "Kia", "color": "Gris", "model": "Rio", "plateNumber": "5173GHI", "year": "2016"}
+{"type": "Sedan", "delegationId": "DEL#BAR", "operation": "CAR#9267ABC", "brand": "Toyota", "color": "Blanco", "model": "C-HR", "plateNumber": "9267ABC", "year": "2012"}
+{"type": "Sedan", "delegationId": "DEL#BAR", "operation": "CAR#6545ABC", "brand": "Hyundai", "color": "Gris", "model": "Kona", "plateNumber": "6545ABC", "year": "2010"}
+{"type": "Hatchback", "delegationId": "DEL#MAD", "operation": "CAR#6880DEF", "brand": "Renault", "color": "Rojo", "model": "Kadjar", "plateNumber": "6880DEF", "year": "2022"}
+{"type": "SUV", "delegationId": "DEL#MÁL", "operation": "CAR#2357ABC", "brand": "Seat", "color": "Azul", "model": "Ibiza", "plateNumber": "2357ABC", "year": "2015"}
+{"type": "Sedan", "delegationId": "DEL#BIL", "operation": "CAR#4850STU", "brand": "Peugeot", "color": "Rojo", "model": "3008", "plateNumber": "4850STU", "year": "2017"}
+{"type": "Compact", "delegationId": "DEL#SAN", "operation": "CAR#4142MNO", "brand": "Kia", "color": "Gris", "model": "Ceed", "plateNumber": "4142MNO", "year": "2021"}
+{"type": "SUV", "delegationId": "DEL#PAL", "operation": "CAR#2908DEF", "brand": "Hyundai", "color": "Verde", "model": "Kona", "plateNumber": "2908DEF", "year": "2018"}
+{"type": "Sedan", "delegationId": "DEL#MAD", "operation": "CAR#4100DEF", "brand": "Hyundai", "color": "Negro", "model": "Tucson", "plateNumber": "4100DEF", "year": "2016"}
+{"type": "Compact", "delegationId": "DEL#GIJ", "operation": "CAR#1101XYZ", "brand": "Renault", "color": "Rojo", "model": "Kadjar", "plateNumber": "1101XYZ", "year": "2021"}
+{"type": "SUV", "delegationId": "DEL#BIL", "operation": "CAR#9319DEF", "brand": "Seat", "color": "Blanco", "model": "Arona", "plateNumber": "9319DEF", "year": "2014"}
+{"type": "Hatchback", "delegationId": "DEL#GIJ", "operation": "CAR#3155ABC", "brand": "Renault", "color": "Blanco", "model": "Megane", "plateNumber": "3155ABC", "year": "2022"}
+{"type": "Sedan", "delegationId": "DEL#PAL", "operation": "CAR#8019GHI", "brand": "Peugeot", "color": "Blanco", "model": "308", "plateNumber": "8019GHI", "year": "2015"}
+{"type": "Compact", "delegationId": "DEL#ALI", "operation": "CAR#5312VWX", "brand": "Seat", "color": "Negro", "model": "Ibiza", "plateNumber": "5312VWX", "year": "2017"}
+{"type": "Sedan", "delegationId": "DEL#MÁL", "operation": "CAR#2991GHI", "brand": "Citroen", "color": "Azul", "model": "Berlingo", "plateNumber": "2991GHI", "year": "2017"}
+{"type": "Sedan", "delegationId": "DEL#MUR", "operation": "CAR#9479PQR", "brand": "Peugeot", "color": "Verde", "model": "2008", "plateNumber": "9479PQR", "year": "2010"}
+{"type": "Sedan", "delegationId": "DEL#BAR", "operation": "CAR#8430DEF", "brand": "Volkswagen", "color": "Rojo", "model": "Tiguan", "plateNumber": "8430DEF", "year": "2017"}
+{"type": "Sedan", "delegationId": "DEL#VAL", "operation": "CAR#6245GHI", "brand": "Seat", "color": "Verde", "model": "Arona", "plateNumber": "6245GHI", "year": "2021"}
+{"type": "Sedan", "delegationId": "DEL#BIL", "operation": "CAR#3591VWX", "brand": "Peugeot", "color": "Gris", "model": "208", "plateNumber": "3591VWX", "year": "2022"}
+{"type": "Sedan", "delegationId": "DEL#BAR", "operation": "CAR#8043XYZ", "brand": "Ford", "color": "Azul", "model": "Focus", "plateNumber": "8043XYZ", "year": "2016"}
+{"type": "Compact", "delegationId": "DEL#CÓR", "operation": "CAR#5070STU", "brand": "Fiat", "color": "Blanco", "model": "Punto", "plateNumber": "5070STU", "year": "2010"}
+{"type": "SUV", "delegationId": "DEL#SEV", "operation": "CAR#4606XYZ", "brand": "Peugeot", "color": "Rojo", "model": "3008", "plateNumber": "4606XYZ", "year": "2012"}
+{"type": "SUV", "delegationId": "DEL#CÓR", "operation": "CAR#1324PQR", "brand": "Kia", "color": "Negro", "model": "Sportage", "plateNumber": "1324PQR", "year": "2014"}
+{"type": "Sedan", "delegationId": "DEL#BAR", "operation": "CAR#9526STU", "brand": "Citroen", "color": "Gris", "model": "Berlingo", "plateNumber": "9526STU", "year": "2012"}
+{"type": "Sedan", "delegationId": "DEL#VIG", "operation": "CAR#2099PQR", "brand": "Hyundai", "color": "Blanco", "model": "i20", "plateNumber": "2099PQR", "year": "2022"}
+{"type": "Compact", "delegationId": "DEL#SEV", "operation": "CAR#5487PQR", "brand": "Citroen", "color": "Negro", "model": "C5 Aircross", "plateNumber": "5487PQR", "year": "2017"}
+{"type": "Hatchback", "delegationId": "DEL#VAL", "operation": "CAR#3655MNO", "brand": "Fiat", "color": "Blanco", "model": "500", "plateNumber": "3655MNO", "year": "2011"}
+{"type": "Hatchback", "delegationId": "DEL#ZAR", "operation": "CAR#9253ABC", "brand": "Ford", "color": "Blanco", "model": "Focus", "plateNumber": "9253ABC", "year": "2017"}
+{"type": "SUV", "delegationId": "DEL#PAL", "operation": "CAR#6436JKL", "brand": "Renault", "color": "Negro", "model": "Clio", "plateNumber": "6436JKL", "year": "2023"}
+{"type": "SUV", "delegationId": "DEL#ZAR", "operation": "CAR#5155DEF", "brand": "Volkswagen", "color": "Rojo", "model": "Tiguan", "plateNumber": "5155DEF", "year": "2021"}
+{"type": "Compact", "delegationId": "DEL#MUR", "operation": "CAR#6190DEF", "brand": "Peugeot", "color": "Azul", "model": "208", "plateNumber": "6190DEF", "year": "2014"}
+{"type": "Sedan", "delegationId": "DEL#VAL", "operation": "CAR#9705STU", "brand": "Volkswagen", "color": "Negro", "model": "Golf", "plateNumber": "9705STU", "year": "2023"}
+{"type": "SUV", "delegationId": "DEL#CÓR", "operation": "CAR#2235XYZ", "brand": "Renault", "color": "Negro", "model": "Kadjar", "plateNumber": "2235XYZ", "year": "2016"}
+{"type": "Sedan", "delegationId": "DEL#BAR", "operation": "CAR#1984VWX", "brand": "Volkswagen", "color": "Gris", "model": "Passat", "plateNumber": "1984VWX", "year": "2021"}
+{"type": "SUV", "delegationId": "DEL#VAL", "operation": "CAR#6809ABC", "brand": "Seat", "color": "Negro", "model": "Ateca", "plateNumber": "6809ABC", "year": "2014"}
+{"type": "Compact", "delegationId": "DEL#VIG", "operation": "CAR#6460PQR", "brand": "Toyota", "color": "Azul", "model": "RAV4", "plateNumber": "6460PQR", "year": "2017"}
+{"type": "Hatchback", "delegationId": "DEL#GIJ", "operation": "CAR#4462STU", "brand": "Citroen", "color": "Blanco", "model": "C4", "plateNumber": "4462STU", "year": "2017"}
+{"type": "Sedan", "delegationId": "DEL#VAL", "operation": "CAR#3268DEF", "brand": "Peugeot", "color": "Blanco", "model": "308", "plateNumber": "3268DEF", "year": "2021"}
+{"type": "SUV", "delegationId": "DEL#VAL", "operation": "CAR#5609PQR", "brand": "Fiat", "color": "Blanco", "model": "500", "plateNumber": "5609PQR", "year": "2023"}
+{"type": "Hatchback", "delegationId": "DEL#BAR", "operation": "CAR#8677GHI", "brand": "Fiat", "color": "Blanco", "model": "500", "plateNumber": "8677GHI", "year": "2020"}
+{"type": "Sedan", "delegationId": "DEL#BIL", "operation": "CAR#3896ABC", "brand": "Citroen", "color": "Verde", "model": "C3", "plateNumber": "3896ABC", "year": "2010"}
+{"type": "SUV", "delegationId": "DEL#SEV", "operation": "CAR#8854ABC", "brand": "Hyundai", "color": "Rojo", "model": "Kona", "plateNumber": "8854ABC", "year": "2015"}
+{"type": "Compact", "delegationId": "DEL#BIL", "operation": "CAR#5337PQR", "brand": "Hyundai", "color": "Verde", "model": "Tucson", "plateNumber": "5337PQR", "year": "2017"}
+{"type": "SUV", "delegationId": "DEL#MAD", "operation": "CAR#1775XYZ", "brand": "Volkswagen", "color": "Blanco", "model": "Polo", "plateNumber": "1775XYZ", "year": "2012"}
+{"type": "SUV", "delegationId": "DEL#VAL", "operation": "CAR#9690VWX", "brand": "Seat", "color": "Negro", "model": "Ibiza", "plateNumber": "9690VWX", "year": "2020"}
+{"type": "Compact", "delegationId": "DEL#SAN", "operation": "CAR#5419DEF", "brand": "Citroen", "color": "Verde", "model": "C3", "plateNumber": "5419DEF", "year": "2018"}
+{"type": "Sedan", "delegationId": "DEL#BIL", "operation": "CAR#9665VWX", "brand": "Renault", "color": "Rojo", "model": "Megane", "plateNumber": "9665VWX", "year": "2018"}
+{"type": "Compact", "delegationId": "DEL#CÓR", "operation": "CAR#2679STU", "brand": "Hyundai", "color": "Rojo", "model": "i20", "plateNumber": "2679STU", "year": "2023"}
+{"type": "SUV", "delegationId": "DEL#VAL", "operation": "CAR#2341VWX", "brand": "Peugeot", "color": "Rojo", "model": "3008", "plateNumber": "2341VWX", "year": "2022"}
+{"type": "Hatchback", "delegationId": "DEL#BAR", "operation": "CAR#6883VWX", "brand": "Renault", "color": "Blanco", "model": "Kadjar", "plateNumber": "6883VWX", "year": "2018"}
+{"type": "SUV", "delegationId": "DEL#MUR", "operation": "CAR#5583PQR", "brand": "Toyota", "color": "Gris", "model": "RAV4", "plateNumber": "5583PQR", "year": "2017"}
+{"type": "Compact", "delegationId": "DEL#VIG", "operation": "CAR#2332XYZ", "brand": "Kia", "color": "Blanco", "model": "Sportage", "plateNumber": "2332XYZ", "year": "2020"}
+{"type": "Hatchback", "delegationId": "DEL#SAN", "operation": "CAR#3815STU", "brand": "Seat", "color": "Negro", "model": "Ateca", "plateNumber": "3815STU", "year": "2011"}
+{"type": "Compact", "delegationId": "DEL#VAL", "operation": "CAR#5651DEF", "brand": "Renault", "color": "Azul", "model": "Kadjar", "plateNumber": "5651DEF", "year": "2023"}
+{"type": "Sedan", "delegationId": "DEL#MUR", "operation": "CAR#2119ABC", "brand": "Toyota", "color": "Verde", "model": "Yaris", "plateNumber": "2119ABC", "year": "2012"}
+{"type": "Sedan", "delegationId": "DEL#VIG", "operation": "CAR#9540XYZ", "brand": "Volkswagen", "color": "Rojo", "model": "Passat", "plateNumber": "9540XYZ", "year": "2011"}
+{"type": "Sedan", "delegationId": "DEL#ZAR", "operation": "CAR#3141DEF", "brand": "Peugeot", "color": "Azul", "model": "308", "plateNumber": "3141DEF", "year": "2010"}
+{"type": "Compact", "delegationId": "DEL#GIJ", "operation": "CAR#1659DEF", "brand": "Renault", "color": "Blanco", "model": "Captur", "plateNumber": "1659DEF", "year": "2022"}
+{"type": "Compact", "delegationId": "DEL#VIG", "operation": "CAR#6516STU", "brand": "Seat", "color": "Azul", "model": "Ibiza", "plateNumber": "6516STU", "year": "2010"}
+{"type": "SUV", "delegationId": "DEL#SAN", "operation": "CAR#1685ABC", "brand": "Ford", "color": "Verde", "model": "Kuga", "plateNumber": "1685ABC", "year": "2014"}
+{"type": "Hatchback", "delegationId": "DEL#ALI", "operation": "CAR#2343XYZ", "brand": "Ford", "color": "Rojo", "model": "Fiesta", "plateNumber": "2343XYZ", "year": "2016"}
+{"type": "Compact", "delegationId": "DEL#ZAR", "operation": "CAR#3948JKL", "brand": "Citroen", "color": "Gris", "model": "C5 Aircross", "plateNumber": "3948JKL", "year": "2017"}
+{"type": "SUV", "delegationId": "DEL#MÁL", "operation": "CAR#7538VWX", "brand": "Seat", "color": "Rojo", "model": "Leon", "plateNumber": "7538VWX", "year": "2020"}
+{"type": "SUV", "delegationId": "DEL#BAR", "operation": "CAR#1620PQR", "brand": "Seat", "color": "Gris", "model": "Ateca", "plateNumber": "1620PQR", "year": "2017"}
+{"type": "Hatchback", "delegationId": "DEL#PAL", "operation": "CAR#9973JKL", "brand": "Fiat", "color": "Rojo", "model": "500", "plateNumber": "9973JKL", "year": "2022"}
+{"type": "Compact", "delegationId": "DEL#VAL", "operation": "CAR#9992STU", "brand": "Toyota", "color": "Azul", "model": "Yaris", "plateNumber": "9992STU", "year": "2015"}
+{"type": "Compact", "delegationId": "DEL#BIL", "operation": "CAR#8095PQR", "brand": "Fiat", "color": "Gris", "model": "500", "plateNumber": "8095PQR", "year": "2015"}
+{"type": "Hatchback", "delegationId": "DEL#MAD", "operation": "CAR#3124XYZ", "brand": "Renault", "color": "Gris", "model": "Megane", "plateNumber": "3124XYZ", "year": "2022"}
+{"type": "SUV", "delegationId": "DEL#SAN", "operation": "CAR#8649JKL", "brand": "Seat", "color": "Gris", "model": "Leon", "plateNumber": "8649JKL", "year": "2012"}
+{"type": "Compact", "delegationId": "DEL#BIL", "operation": "CAR#7372XYZ", "brand": "Ford", "color": "Gris", "model": "Focus", "plateNumber": "7372XYZ", "year": "2015"}
+{"type": "Compact", "delegationId": "DEL#CÓR", "operation": "CAR#2466GHI", "brand": "Peugeot", "color": "Gris", "model": "2008", "plateNumber": "2466GHI", "year": "2014"}
+{"type": "Sedan", "delegationId": "DEL#SAN", "operation": "CAR#3436XYZ", "brand": "Peugeot", "color": "Azul", "model": "308", "plateNumber": "3436XYZ", "year": "2018"}
+{"type": "Compact", "delegationId": "DEL#SAN", "operation": "CAR#1832PQR", "brand": "Citroen", "color": "Azul", "model": "C3", "plateNumber": "1832PQR", "year": "2017"}
+{"type": "Sedan", "delegationId": "DEL#GIJ", "operation": "CAR#7023VWX", "brand": "Citroen", "color": "Azul", "model": "C3", "plateNumber": "7023VWX", "year": "2021"}
+{"type": "Sedan", "delegationId": "DEL#MÁL", "operation": "CAR#9706PQR", "brand": "Hyundai", "color": "Rojo", "model": "Tucson", "plateNumber": "9706PQR", "year": "2018"}
+{"type": "Compact", "delegationId": "DEL#PAL", "operation": "CAR#6299DEF", "brand": "Citroen", "color": "Gris", "model": "Berlingo", "plateNumber": "6299DEF", "year": "2023"}
+{"type": "Sedan", "delegationId": "DEL#VIG", "operation": "CAR#1404GHI", "brand": "Volkswagen", "color": "Negro", "model": "Polo", "plateNumber": "1404GHI", "year": "2013"}
+{"type": "SUV", "delegationId": "DEL#ALI", "operation": "CAR#6363VWX", "brand": "Volkswagen", "color": "Verde", "model": "Passat", "plateNumber": "6363VWX", "year": "2015"}
+{"type": "Sedan", "delegationId": "DEL#ZAR", "operation": "CAR#1539MNO", "brand": "Volkswagen", "color": "Rojo", "model": "Passat", "plateNumber": "1539MNO", "year": "2019"}
+{"type": "Hatchback", "delegationId": "DEL#BIL", "operation": "CAR#6963STU", "brand": "Ford", "color": "Negro", "model": "Puma", "plateNumber": "6963STU", "year": "2020"}
+{"type": "Hatchback", "delegationId": "DEL#VAL", "operation": "CAR#2494DEF", "brand": "Volkswagen", "color": "Rojo", "model": "Polo", "plateNumber": "2494DEF", "year": "2022"}
+{"type": "Sedan", "delegationId": "DEL#MUR", "operation": "CAR#4122ABC", "brand": "Fiat", "color": "Rojo", "model": "Panda", "plateNumber": "4122ABC", "year": "2013"}
+{"type": "Sedan", "delegationId": "DEL#VAL", "operation": "CAR#4916ABC", "brand": "Citroen", "color": "Verde", "model": "C4", "plateNumber": "4916ABC", "year": "2022"}
+{"type": "Hatchback", "delegationId": "DEL#PAL", "operation": "CAR#1004MNO", "brand": "Toyota", "color": "Negro", "model": "Yaris", "plateNumber": "1004MNO", "year": "2021"}
+{"type": "Sedan", "delegationId": "DEL#GIJ", "operation": "CAR#8055ABC", "brand": "Volkswagen", "color": "Negro", "model": "Tiguan", "plateNumber": "8055ABC", "year": "2012"}
+{"type": "Hatchback", "delegationId": "DEL#SEV", "operation": "CAR#6584XYZ", "brand": "Kia", "color": "Blanco", "model": "Ceed", "plateNumber": "6584XYZ", "year": "2014"}
+{"type": "Sedan", "delegationId": "DEL#ALI", "operation": "CAR#1149JKL", "brand": "Volkswagen", "color": "Rojo", "model": "Tiguan", "plateNumber": "1149JKL", "year": "2019"}
+{"type": "Hatchback", "delegationId": "DEL#ZAR", "operation": "CAR#8377JKL", "brand": "Fiat", "color": "Azul", "model": "Panda", "plateNumber": "8377JKL", "year": "2017"}
+{"type": "Hatchback", "delegationId": "DEL#BIL", "operation": "CAR#5245STU", "brand": "Hyundai", "color": "Negro", "model": "Tucson", "plateNumber": "5245STU", "year": "2020"}
+{"type": "Sedan", "delegationId": "DEL#VIG", "operation": "CAR#8636MNO", "brand": "Toyota", "color": "Gris", "model": "RAV4", "plateNumber": "8636MNO", "year": "2013"}
+{"type": "Sedan", "delegationId": "DEL#ZAR", "operation": "CAR#9647STU", "brand": "Fiat", "color": "Blanco", "model": "500", "plateNumber": "9647STU", "year": "2014"}
+{"type": "Hatchback", "delegationId": "DEL#PAL", "operation": "CAR#9944MNO", "brand": "Ford", "color": "Negro", "model": "Puma", "plateNumber": "9944MNO", "year": "2016"}
+{"type": "Compact", "delegationId": "DEL#MUR", "operation": "CAR#1200VWX", "brand": "Fiat", "color": "Negro", "model": "Punto", "plateNumber": "1200VWX", "year": "2019"}
+{"type": "Sedan", "delegationId": "DEL#MÁL", "operation": "CAR#7946MNO", "brand": "Hyundai", "color": "Verde", "model": "i20", "plateNumber": "7946MNO", "year": "2017"}
+{"type": "SUV", "delegationId": "DEL#PAL", "operation": "CAR#6391MNO", "brand": "Hyundai", "color": "Gris", "model": "Kona", "plateNumber": "6391MNO", "year": "2014"}
+{"type": "SUV", "delegationId": "DEL#BAR", "operation": "CAR#2590GHI", "brand": "Seat", "color": "Azul", "model": "Ateca", "plateNumber": "2590GHI", "year": "2011"}
+{"type": "SUV", "delegationId": "DEL#VAL", "operation": "CAR#7024XYZ", "brand": "Seat", "color": "Verde", "model": "Ateca", "plateNumber": "7024XYZ", "year": "2017"}
+{"type": "Sedan", "delegationId": "DEL#BAR", "operation": "CAR#4382PQR", "brand": "Kia", "color": "Blanco", "model": "Rio", "plateNumber": "4382PQR", "year": "2022"}
+{"type": "Sedan", "delegationId": "DEL#ZAR", "operation": "CAR#1176PQR", "brand": "Fiat", "color": "Rojo", "model": "Tipo", "plateNumber": "1176PQR", "year": "2023"}
+{"type": "Hatchback", "delegationId": "DEL#MUR", "operation": "CAR#5090JKL", "brand": "Citroen", "color": "Rojo", "model": "C5 Aircross", "plateNumber": "5090JKL", "year": "2020"}
+{"type": "Hatchback", "delegationId": "DEL#BAR", "operation": "CAR#4897ABC", "brand": "Seat", "color": "Negro", "model": "Leon", "plateNumber": "4897ABC", "year": "2010"}
+{"type": "Sedan", "delegationId": "DEL#CÓR", "operation": "CAR#3080GHI", "brand": "Citroen", "color": "Blanco", "model": "C5 Aircross", "plateNumber": "3080GHI", "year": "2011"}
+{"type": "Hatchback", "delegationId": "DEL#ZAR", "operation": "CAR#6083DEF", "brand": "Ford", "color": "Blanco", "model": "Focus", "plateNumber": "6083DEF", "year": "2013"}
+{"type": "Sedan", "delegationId": "DEL#BAR", "operation": "CAR#1018GHI", "brand": "Peugeot", "color": "Gris", "model": "308", "plateNumber": "1018GHI", "year": "2019"}
+{"type": "Compact", "delegationId": "DEL#MÁL", "operation": "CAR#1116PQR", "brand": "Kia", "color": "Gris", "model": "Ceed", "plateNumber": "1116PQR", "year": "2010"}
+{"type": "SUV", "delegationId": "DEL#PAL", "operation": "CAR#8990JKL", "brand": "Citroen", "color": "Azul", "model": "Berlingo", "plateNumber": "8990JKL", "year": "2021"}
+{"type": "Hatchback", "delegationId": "DEL#MÁL", "operation": "CAR#2085PQR", "brand": "Toyota", "color": "Azul", "model": "RAV4", "plateNumber": "2085PQR", "year": "2019"}
+{"type": "SUV", "delegationId": "DEL#MÁL", "operation": "CAR#4135MNO", "brand": "Kia", "color": "Gris", "model": "Ceed", "plateNumber": "4135MNO", "year": "2014"}
+{"type": "Hatchback", "delegationId": "DEL#SEV", "operation": "CAR#6585ABC", "brand": "Citroen", "color": "Rojo", "model": "Berlingo", "plateNumber": "6585ABC", "year": "2010"}
+{"type": "SUV", "delegationId": "DEL#VAL", "operation": "CAR#5440GHI", "brand": "Toyota", "color": "Rojo", "model": "C-HR", "plateNumber": "5440GHI", "year": "2022"}
+{"type": "Sedan", "delegationId": "DEL#VAL", "operation": "CAR#7136JKL", "brand": "Peugeot", "color": "Azul", "model": "308", "plateNumber": "7136JKL", "year": "2019"}
+{"type": "SUV", "delegationId": "DEL#MUR", "operation": "CAR#3704ABC", "brand": "Ford", "color": "Negro", "model": "Kuga", "plateNumber": "3704ABC", "year": "2015"}
+{"type": "Sedan", "delegationId": "DEL#BIL", "operation": "CAR#4114VWX", "brand": "Fiat", "color": "Blanco", "model": "Punto", "plateNumber": "4114VWX", "year": "2020"}
+{"type": "Hatchback", "delegationId": "DEL#SAN", "operation": "CAR#3522ABC", "brand": "Citroen", "color": "Rojo", "model": "C3", "plateNumber": "3522ABC", "year": "2018"}
+{"type": "Sedan", "delegationId": "DEL#BAR", "operation": "CAR#3548VWX", "brand": "Kia", "color": "Gris", "model": "Stonic", "plateNumber": "3548VWX", "year": "2016"}
+{"type": "Compact", "delegationId": "DEL#GIJ", "operation": "CAR#9344DEF", "brand": "Peugeot", "color": "Verde", "model": "3008", "plateNumber": "9344DEF", "year": "2013"}
+{"type": "Hatchback", "delegationId": "DEL#MUR", "operation": "CAR#4005STU", "brand": "Fiat", "color": "Azul", "model": "Panda", "plateNumber": "4005STU", "year": "2022"}
+{"type": "Hatchback", "delegationId": "DEL#BAR", "operation": "CAR#3633GHI", "brand": "Volkswagen", "color": "Gris", "model": "Tiguan", "plateNumber": "3633GHI", "year": "2012"}
+{"type": "Sedan", "delegationId": "DEL#BIL", "operation": "CAR#1942PQR", "brand": "Citroen", "color": "Gris", "model": "C4", "plateNumber": "1942PQR", "year": "2012"}
+{"type": "Sedan", "delegationId": "DEL#BIL", "operation": "CAR#9671ABC", "brand": "Peugeot", "color": "Negro", "model": "308", "plateNumber": "9671ABC", "year": "2011"}
+{"type": "Sedan", "delegationId": "DEL#MUR", "operation": "CAR#4847VWX", "brand": "Renault", "color": "Azul", "model": "Kadjar", "plateNumber": "4847VWX", "year": "2022"}
+{"type": "Compact", "delegationId": "DEL#VIG", "operation": "CAR#9039GHI", "brand": "Hyundai", "color": "Blanco", "model": "Kona", "plateNumber": "9039GHI", "year": "2018"}
+{"type": "Sedan", "delegationId": "DEL#VAL", "operation": "CAR#5056XYZ", "brand": "Ford", "color": "Azul", "model": "Kuga", "plateNumber": "5056XYZ", "year": "2012"}
+{"type": "Hatchback", "delegationId": "DEL#SEV", "operation": "CAR#1114VWX", "brand": "Toyota", "color": "Negro", "model": "Yaris", "plateNumber": "1114VWX", "year": "2013"}
+{"type": "SUV", "delegationId": "DEL#MUR", "operation": "CAR#7112JKL", "brand": "Seat", "color": "Rojo", "model": "Ibiza", "plateNumber": "7112JKL", "year": "2020"}
+{"type": "Sedan", "delegationId": "DEL#MUR", "operation": "CAR#9999STU", "brand": "Hyundai", "color": "Rojo", "model": "Kona", "plateNumber": "9999STU", "year": "2012"}
+{"type": "Sedan", "delegationId": "DEL#BIL", "operation": "CAR#2621GHI", "brand": "Peugeot", "color": "Negro", "model": "308", "plateNumber": "2621GHI", "year": "2011"}
+{"type": "Sedan", "delegationId": "DEL#MAD", "operation": "CAR#2537XYZ", "brand": "Renault", "color": "Gris", "model": "Megane", "plateNumber": "2537XYZ", "year": "2014"}
+{"type": "Compact", "delegationId": "DEL#VAL", "operation": "CAR#9027PQR", "brand": "Fiat", "color": "Gris", "model": "Panda", "plateNumber": "9027PQR", "year": "2023"}
+{"type": "Hatchback", "delegationId": "DEL#PAL", "operation": "CAR#5481MNO", "brand": "Ford", "color": "Azul", "model": "Kuga", "plateNumber": "5481MNO", "year": "2020"}
+{"type": "Sedan", "delegationId": "DEL#SEV", "operation": "CAR#4257GHI", "brand": "Volkswagen", "color": "Negro", "model": "Tiguan", "plateNumber": "4257GHI", "year": "2015"}
+{"type": "Compact", "delegationId": "DEL#SAN", "operation": "CAR#1239PQR", "brand": "Citroen", "color": "Gris", "model": "C5 Aircross", "plateNumber": "1239PQR", "year": "2023"}
+{"type": "Sedan", "delegationId": "DEL#VAL", "operation": "CAR#6204STU", "brand": "Hyundai", "color": "Blanco", "model": "i30", "plateNumber": "6204STU", "year": "2011"}
+{"type": "SUV", "delegationId": "DEL#CÓR", "operation": "CAR#7694PQR", "brand": "Fiat", "color": "Negro", "model": "Punto", "plateNumber": "7694PQR", "year": "2014"}
+{"type": "Hatchback", "delegationId": "DEL#ALI", "operation": "CAR#2803DEF", "brand": "Toyota", "color": "Blanco", "model": "C-HR", "plateNumber": "2803DEF", "year": "2019"}
+{"type": "Hatchback", "delegationId": "DEL#VAL", "operation": "CAR#1385MNO", "brand": "Hyundai", "color": "Verde", "model": "i30", "plateNumber": "1385MNO", "year": "2021"}
+{"type": "SUV", "delegationId": "DEL#MÁL", "operation": "CAR#9425ABC", "brand": "Ford", "color": "Azul", "model": "Puma", "plateNumber": "9425ABC", "year": "2012"}
