@@ -15,6 +15,9 @@ public class Car {
     private String year;
     private String color;
     private String type;
+    private int price;
+    private String imageUrl;
+
 
 
     @DynamoDbPartitionKey
@@ -82,5 +85,21 @@ public class Car {
 
     public void setPlateNumber(String plateNumber) {
         this.plateNumber = plateNumber;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
 }

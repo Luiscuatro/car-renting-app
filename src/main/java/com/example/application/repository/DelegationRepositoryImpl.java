@@ -31,6 +31,10 @@ public class DelegationRepositoryImpl {
         this.calendarTable = enhancedClient.table("DelegationsTable", TableSchema.fromBean(CalendarAvailability.class));
     }
 
+    public DynamoDbTable<CalendarAvailability> calendarTable() {
+        return this.calendarTable;
+    }
+
     public List<Delegation> getAllDelegations() {
         return delegationTable.scan().items().stream()
                 .filter(item -> "DATA".equals(item.getOperation()))

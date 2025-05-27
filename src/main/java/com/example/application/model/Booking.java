@@ -15,6 +15,10 @@ public class Booking {
     private List<String> bookedDates;
     private int price;
     private String status;
+    private String carBrand;
+    private String carModel;
+    private String imageUrl;
+
 
     @DynamoDbPartitionKey
     public String getUserId() {
@@ -81,4 +85,27 @@ public class Booking {
         return null;
     }
 
+    public String getCarBrand() {
+        return carBrand;
+    }
+
+    public void setCarBrand(String carBrand) {
+        this.carBrand = carBrand;
+    }
+
+    public String getCarModel() {
+        return carModel;
+    }
+
+    public void setCarModel(String carModel) {
+        this.carModel = carModel;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
 }
