@@ -25,7 +25,8 @@ export default function AvailableCarsView() {
 
     try {
       const cars = await DelegationEndpoint.getAvailableCars(delegationId, startDate, endDate);
-      setAvailableCars(cars);
+      setAvailableCars((cars ?? []).filter(Boolean));
+
       setStatus(null);
     } catch (error) {
       console.error(error);
