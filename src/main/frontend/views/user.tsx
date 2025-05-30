@@ -1,140 +1,92 @@
 import { useState } from 'react';
-import { UserEndpoint } from 'Frontend/generated/endpoints.js';
-import User from 'Frontend/generated/com/example/application/model/User';
-import Booking from 'Frontend/generated/com/example/application/model/Booking';
-import { DatePicker } from '@vaadin/react-components/DatePicker.js';
+import { TextField, Checkbox, FormControlLabel, Button } from '@mui/material';
+import { UserEndpoint } from 'Frontend/generated/endpoints';
 
-export default function CreateUserView() {
-  const [userId, setUserId] = useState('');
+export default function UserRegisterView() {
   const [fullName, setFullName] = useState('');
   const [email, setEmail] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
   const [licenseNumber, setLicenseNumber] = useState('');
   const [admin, setAdmin] = useState(false);
+  const [status, setStatus] = useState<string | null>(null);
 
-  const [bookings, setBookings] = useState<Booking[]>([]);
-  const [currentBooking, setCurrentBooking] = useState<Partial<Booking>>({});
+  const handleRegister = async () => {
+    if (!licenseNumber || !fullName || !email || !phoneNumber) {
+      setStatus('Por favor, completa todos los campos obligatorios.');
+      return;
+    }
 
-  const addBooking = () => {
-    if (!currentBooking.operation) return;
-    setBookings([...bookings, currentBooking as Booking]);
-    setCurrentBooking({});
-  };
-
-  const handleSave = async () => {
-    const user: User = {
-      userId,
+    const user = {
+      userId: `USER#${licenseNumber}`,
       operation: 'profile',
       fullName,
       email,
       phoneNumber,
       licenseNumber,
-      admin,
+      admin
     };
 
-    await UserEndpoint.saveUser(user);
-    alert('Usuario guardado');
+    try {
+      await UserEndpoint.saveUser(user);
+      setStatus('Usuario registrado con éxito');
+    } catch (error) {
+      console.error(error);
+      setStatus('Error al registrar el usuario');
+    }
   };
 
   return (
-    <div>
-      <h2>Crear usuario</h2>
-      <input
-        placeholder="User ID"
-        value={userId}
-        onChange={e => setUserId(e.target.value)}
-      />
-      <input
-        placeholder="Nombre completo"
+    <div className="p-6 max-w-lg mx-auto">
+      <h2 className="text-2xl font-bold mb-4">Registro de Usuario</h2>
+
+      <TextField
+        label="Nombre completo"
         value={fullName}
-        onChange={e => setFullName(e.target.value)}
+        onChange={(e) => setFullName(e.target.value)}
+        fullWidth
+        className="mb-4"
       />
-      <input
-        placeholder="Email"
+      <TextField
+        label="Correo electrónico"
         value={email}
-        onChange={e => setEmail(e.target.value)}
+        onChange={(e) => setEmail(e.target.value)}
+        fullWidth
+        className="mb-4"
       />
-      <input
-        placeholder="Teléfono"
+      <TextField
+        label="Teléfono"
         value={phoneNumber}
-        onChange={e => setPhoneNumber(e.target.value)}
+        onChange={(e) => setPhoneNumber(e.target.value)}
+        fullWidth
+        className="mb-4"
       />
-      <input
-        placeholder="Licencia"
+      <TextField
+        label="Número de licencia"
         value={licenseNumber}
-        onChange={e => setLicenseNumber(e.target.value)}
+        onChange={(e) => setLicenseNumber(e.target.value)}
+        fullWidth
+        className="mb-4"
       />
-      <label>
-        Admin:
-        <input
-          type="checkbox"
-          checked={admin}
-          onChange={e => setAdmin(e.target.checked)}
-        />
-      </label>
+      <FormControlLabel
+        control={
+          <Checkbox
+            checked={admin}
+            onChange={(e) => setAdmin(e.target.checked)}
+          />
+        }
+        label="¿Es administrador?"
+      />
 
-      <h3>Añadir Booking</h3>
-      <input
-        placeholder="Booking ID"
-        value={currentBooking.operation || ''}
-        onChange={e =>
-            setCurrentBooking({ ...currentBooking, operation: e.target.value })
-        }
+      <Button
+        variant="contained"
+        color="primary"
+        onClick={handleRegister}
+        className="mt-4"
+      >
+        Registrar Usuario
+      </Button>
 
-      />
-      <input
-        placeholder="Car ID"
-        value={currentBooking.plateNumber || ''}
-        onChange={e =>
-          setCurrentBooking({ ...currentBooking, plateNumber: e.target.value })
-        }
-      />
-      <DatePicker
-        label="Start Date"
-        value={currentBooking.startDate || ''}
-        onChange={e =>
-          setCurrentBooking({ ...currentBooking, startDate: e.target.value })
-        }
-      />
-      <DatePicker
-        label="End Date"
-        value={currentBooking.endDate || ''}
-        onChange={e =>
-          setCurrentBooking({ ...currentBooking, endDate: e.target.value })
-        }
-      />
-      <input
-        placeholder="Price"
-        type="number"
-        value={currentBooking.price || ''}
-        onChange={e =>
-          setCurrentBooking({
-            ...currentBooking,
-            price: parseFloat(e.target.value),
-          })
-        }
-      />
-      <input
-        placeholder="Status"
-        value={currentBooking.status || ''}
-        onChange={e =>
-          setCurrentBooking({ ...currentBooking, status: e.target.value })
-        }
-      />
-      <button onClick={addBooking}>Añadir Booking</button>
-
-      <h4>Bookings añadidos:</h4>
-      <ul>
-        {bookings.map((b, index) => (
-          <li key={index}>
-            {b.operation} - {b.plateNumber} ({b.startDate} → {b.endDate})
-          </li>
-        ))}
-      </ul>
-
-      <br />
-      <button onClick={handleSave}>Guardar Usuario</button>
+      {status && <p className="mt-4 text-sm text-gray-700">{status}</p>}
     </div>
   );
 }
-``
