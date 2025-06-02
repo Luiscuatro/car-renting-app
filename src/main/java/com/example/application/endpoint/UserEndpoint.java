@@ -7,6 +7,8 @@ import com.vaadin.flow.server.auth.AnonymousAllowed;
 import com.vaadin.hilla.Endpoint;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.util.List;
+
 @Endpoint
 @AnonymousAllowed
 public class UserEndpoint {
@@ -28,6 +30,10 @@ public class UserEndpoint {
 
     public void saveBooking(Booking booking) {
         userRepository.saveBooking(booking);
+    }
+
+    public List<User> getAllUsers() {
+        return userRepository.getAllUsers();
     }
 
 }

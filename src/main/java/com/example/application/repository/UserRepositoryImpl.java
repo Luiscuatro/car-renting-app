@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import software.amazon.awssdk.enhanced.dynamodb.*;
 import software.amazon.awssdk.enhanced.dynamodb.model.GetItemEnhancedRequest;
+import software.amazon.awssdk.enhanced.dynamodb.model.ScanEnhancedRequest;
 
 import java.util.List;
 
@@ -63,4 +64,13 @@ public class UserRepositoryImpl {
             calendarTable.putItem(calendar);
         }
     }
+
+    public List<User> getAllUsers() {
+        return userTable.scan(ScanEnhancedRequest.builder().build())
+                .items()
+                .stream()
+                .filter(user -> "profile".equals(user.getOperation()))
+                .toList();
+    }
+
 }
